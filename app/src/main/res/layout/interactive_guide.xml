@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/guideLayout">
+
+    <!-- Contenedor principal con disposición vertical -->
+    <LinearLayout
+        android:id="@+id/milenear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/background_guide"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- Título de bienvenida -->
+        <TextView
+            android:id="@+id/glWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/guide_welcome"
+            android:textColor="@color/blue_light"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/glDescription"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/guide_description"
+            android:textColor="@color/blueyo"
+            android:textSize="18sp" />
+
+        <!-- Imagen de Spyro -->
+        <ImageView
+            android:id="@+id/glImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/spyro" />
+
+        <!-- Botón para cerrar la guía -->
+        <Button
+            android:id="@+id/btnCloseGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_personalized"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:text="@string/guide_start_button"
+            android:textColor="@color/design_default_color_primary_dark" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/despulso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:text="Mi Etiqueta"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/blue_light"
+        android:padding="8dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/pulsoImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="-30dp"
+        android:layout_marginBottom="-70dp"
+        android:src="@drawable/pulso"
+        android:visibility="gone"
+         />
+
+    <ImageView
+        android:id="@+id/pulsoImagedos"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="105dp"
+        android:layout_marginBottom="-70dp"
+        android:src="@drawable/pulso"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/pulsoImagetres"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="250dp"
+        android:layout_marginBottom="-70dp"
+        android:src="@drawable/pulso"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/pulsoinfo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="270dp"
+        android:src="@drawable/infoluz"
+        android:visibility="gone"
+        android:translationY="-60dp"
+        />
+
+    <Button
+        android:id="@+id/btnSkipGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Omitir Guía"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:background="@drawable/button_guide_selector"
+        android:visibility="gone"/>
+</FrameLayout>

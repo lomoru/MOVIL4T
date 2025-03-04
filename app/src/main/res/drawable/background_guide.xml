@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo con gradiente -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#4B0082"
+            android:centerColor="#8A2BE2"
+            android:endColor="#FFD700"
+            android:type="linear"/>
+        </shape>
+    </item>
+
+        <!-- Imagen del cofre del tesoro en la parte inferior -->
+    <item>
+        <inset android:bottom="40dp" android:left="0dp" android:right="0dp">
+            <bitmap
+                android:src="@drawable/tesoro"
+                android:gravity="top|center_horizontal"
+                android:alpha="0.5"/>
+        </inset>
+    </item>
+
+</layer-list>

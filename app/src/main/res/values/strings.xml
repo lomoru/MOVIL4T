@@ -4,6 +4,12 @@
     <string name="characters">Personajes</string>
     <string name="collectibles">Coleccionables</string>
     <string name="title_about">Acerca de</string>
-    <string name="text_about">Aplicación desarrollada por \n <b>Lindsay Barrero Martínez.</b></string>
+    <string name="text_about">Aplicación desarrollada por \n <b>Lorenzo Moreno Ruiz.</b></string>
     <string name="accept">Aceptar</string>
+
+    <string name="guide_welcome">BIENVENIDO</string>
+    <string name="guide_description">Explora el mundo mágico de Spyro... Te enseñaré a navegar por mundos fascinantes llenos de dragones y tesoros</string>
+    <string name="guide_start_button">Comenzar</string>
+
+    <string name="ani_prime">Aquí podrás explorar a todos los personajes del mundo de Spyro</string>
 </resources>
