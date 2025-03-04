@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/guideLayout">
+
+    <!-- Contenedor principal con disposición vertical -->
+    <LinearLayout
+        android:id="@+id/milenearfinal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/background_guide"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- Título de bienvenida -->
+        <TextView
+            android:id="@+id/glWelcomefinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/guidefinal_welcome"
+            android:textColor="@color/blue_light"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/glDescriptionfinal"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/guidefinal_description"
+            android:textColor="@color/blueyo"
+            android:textSize="18sp" />
+
+        <!-- Imagen de Spyro -->
+        <ImageView
+            android:id="@+id/glImagefinal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/spyro" />
+
+        <!-- Botón para cerrar la guía -->
+        <Button
+            android:id="@+id/btnStartApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_personalized"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:text="@string/guidefinal_start_button"
+            android:textColor="@color/design_default_color_primary_dark" />
+
+    </LinearLayout>
+
+</FrameLayout>

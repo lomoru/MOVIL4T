@@ -22,4 +22,16 @@
         android:name="dam.pmdm.spyrothedragon.ui.CollectiblesFragment"
         android:label="@string/collectibles"
         tools:layout="@layout/fragment_collectibles" />
+    <fragment
+        android:id="@+id/finalGuideFragment"
+        android:name="dam.pmdm.spyrothedragon.ui.FinalGuideFragment"
+        android:label="FinalGuideFragment" >
+        <action
+            android:id="@+id/action_finalGuideFragment_to_navigation_characters"
+            app:destination="@id/navigation_characters"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
 </navigation>

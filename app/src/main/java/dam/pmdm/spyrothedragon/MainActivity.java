@@ -173,6 +173,14 @@ public class MainActivity extends AppCompatActivity {
                                 // Aplicar la animación XML al botón de información
                                 Animation pulse = AnimationUtils.loadAnimation(interactiveGuideBinding.getRoot().getContext(), R.anim.pulse);
                                 interactiveGuideBinding.pulsoinfo.startAnimation(pulse);
+
+                                // Esperar dos segundos antes de navegar al fragmento de resumen
+                                interactiveGuideBinding.pulsoinfo.postDelayed(() -> {
+                                    // Ocultar toda la guía
+                                    interactiveGuideBinding.guideLayout.setVisibility(View.GONE);
+                                    // Ir a la pantalla de despedida
+                                    navController.navigate(R.id.finalGuideFragment);
+                                }, 2000);
                             }
                         });
 
