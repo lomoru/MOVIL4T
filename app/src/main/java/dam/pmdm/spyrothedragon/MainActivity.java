@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private InteractiveGuideBinding interactiveGuideBinding;
     NavController navController = null;
 
-    private boolean needToShowGuide = true;
+    private boolean guiacompleta = false;
+    private SharedPreferences prefe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        initializeGuide();
+        prefe = getSharedPreferences("SpyroPrefs", MODE_PRIVATE);
+        guiacompleta = prefe.getBoolean("guideCompleted", false);
+
+        if (!guiacompleta) {
+            initializeGuide();
+        } else {
+            interactiveGuideBinding.guideLayout.setVisibility(View.GONE);
+        }
+
     }
 
     private void initializeGuide() {
@@ -178,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
                                 interactiveGuideBinding.pulsoinfo.postDelayed(() -> {
                                     // Ocultar toda la guía
                                     interactiveGuideBinding.guideLayout.setVisibility(View.GONE);
+                                    // Escribir para no volver a mostrar la guía
+                                    prefe.edit().putBoolean("guideCompleted", true).apply();
                                     // Ir a la pantalla de despedida
                                     navController.navigate(R.id.finalGuideFragment);
                                 }, 2000);
@@ -214,8 +226,8 @@ public class MainActivity extends AppCompatActivity {
         // Ocultar toda la guía
         interactiveGuideBinding.guideLayout.setVisibility(View.GONE);
 
-        // Habilitar la navegación normal
-        needToShowGuide = false;
+        // Escribir para no volver a mostrar la guía
+        prefe.edit().putBoolean("guideCompleted", true).apply();
     }
 
 
