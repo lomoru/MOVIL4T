@@ -1,5 +1,6 @@
 package dam.pmdm.spyrothedragon.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import dam.pmdm.spyrothedragon.R;
+import dam.pmdm.spyrothedragon.VideoActivity;
 import dam.pmdm.spyrothedragon.databinding.FinalGuideBinding;
 
 public class FinalGuideFragment extends Fragment {
@@ -31,6 +33,12 @@ public class FinalGuideFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.btnStartApp.setOnClickListener(this::pasonave);
+        binding.glImagefinal.setOnClickListener(this::reprovideo);
+    }
+
+    private void reprovideo(View view) {
+        Intent intent = new Intent(requireContext(), VideoActivity.class);
+        startActivity(intent);
     }
 
     private void pasonave(View view) {
